@@ -6,7 +6,7 @@ import sys
 import re
 import urllib2
 
-pattern = re.compile('"javascript:if\(confirm\(%27.*%27\)\)window\.location=%27(.*table_detail.*)%27"')
+pattern = re.compile('''"javascript:if\(confirm\(.*\)\)window\.location=(?:'|%27)(.*table_detail.*)(?:'|%27)"''')
 
 def download_file(url, path = "./", prefix):
 
